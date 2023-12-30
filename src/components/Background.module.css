@@ -1,0 +1,16 @@
+.background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.9;
+	z-index: -1;
+}
+
+.background img {
+	min-width: 100vw;
+	min-height: 100vh;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}

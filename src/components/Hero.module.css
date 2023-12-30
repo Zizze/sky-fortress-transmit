@@ -1,0 +1,78 @@
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: transform ease-in-out 0.2s, border-color ease-in-out 0.2s;
+	background-color: #ddd8c3;
+	padding: 5px;
+	border-radius: 13px;
+	border: 2px solid white;
+
+	@media (max-width: 500px) {
+		border: 1px solid;
+	}
+}
+
+.hero:hover,
+.hero:active {
+	transform: scale(1.05);
+	border-color: #9f02d8;
+
+	@media (max-width: 500px) {
+		transform: scale(1.02);
+	}
+}
+
+.hero img {
+	width: 140px;
+	height: 140px;
+
+	object-fit: cover;
+	margin-bottom: 5px;
+
+	@media (max-width: 650px) {
+		width: 120px;
+		height: 120px;
+	}
+
+	@media (max-width: 500px) {
+		width: 100px;
+		height: 100px;
+	}
+	@media (max-width: 420px) {
+		width: 150px;
+		height: 150px;
+	}
+	@media (max-width: 360px) {
+		width: 120px;
+		height: 120px;
+	}
+	@media (max-width: 299px) {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.hero span {
+	line-height: 1;
+	color: rgb(9, 9, 9);
+	display: block;
+	font-size: 16px;
+	font-weight: 700;
+	transition: color ease-in-out 0.2s;
+
+	@media (max-width: 650px) {
+		font-size: 14px;
+	}
+	@media (max-width: 650px) {
+		font-size: 14px;
+	}
+	@media (max-width: 650px) {
+		font-size: 14px;
+	}
+}
+
+.hero:hover.hero span,
+.hero:active.hero span {
+	color: #9f02d8;
+}
