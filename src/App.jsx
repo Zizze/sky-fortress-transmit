@@ -115,9 +115,10 @@ function App() {
 
 					{!!heroesNames.length && <p className="chance">You have a chance to get:</p>}
 					<ul className="hero__list">
-						{heroesNames.map((name) => (
-							<Hero name={name} key={name} />
-						))}
+						{heroesNames.map((name) => {
+							if (name === "new1" || name === "new2") return;
+							return <Hero name={name} key={name} />;
+						})}
 					</ul>
 				</main>
 				<Footer />
