@@ -234,7 +234,7 @@ const mythic = [
 		],
 	},
 	{
-		name: "Source Crystal Vein",
+		name: "Aethyrine Mine",
 		options: [
 			{ name: "firearms", heroes: ["newton", "linsey", "lynn", "tricia", "ethan"] },
 			{ name: "fencing", heroes: ["qian sui", "corvus", "nemo", "new2", "ling"] },
