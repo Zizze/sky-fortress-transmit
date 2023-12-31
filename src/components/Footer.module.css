@@ -48,6 +48,7 @@
 	}
 }
 
-.tablelink a:active {
+.tablelink a:active,
+.tablelink a:focus {
 	color: white;
 }
