@@ -274,7 +274,7 @@ const mythic = [
 		],
 	},
 	{
-		name: "Glory Battlefield",
+		name: "Glorious Battlefield",
 		options: [
 			{ name: "short hair", heroes: ["qian sui", "augus", "andre", "new1", "nicholas"] },
 			{ name: "protection", heroes: ["nemo", "wiyanna", "brynhild", "ling"] },
