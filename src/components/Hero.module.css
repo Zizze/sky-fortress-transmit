@@ -13,17 +13,8 @@
 	}
 }
 
-.hero:hover,
-.hero:active {
-	transform: scale(1.05);
-	border-color: #9f02d8;
-
-	@media (max-width: 500px) {
-		transform: scale(1.02);
-	}
-}
-
 .hero img {
+	border-radius: 10px;
 	width: 140px;
 	height: 140px;
 
@@ -72,7 +63,13 @@
 	}
 }
 
-.hero:hover.hero span,
-.hero:active.hero span {
-	color: #9f02d8;
+@media (hover: hover) {
+	.hero:hover {
+		transform: scale(1.05);
+		border-color: #9f02d8;
+	}
+
+	.hero:hover.hero span {
+		color: #9f02d8;
+	}
 }

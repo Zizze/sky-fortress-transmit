@@ -234,6 +234,16 @@ const mythic = [
 		],
 	},
 	{
+		name: "Glorious Battlefield",
+		options: [
+			{ name: "short hair", heroes: ["qian sui", "augus", "andre", "new1", "nicholas"] },
+			{ name: "protection", heroes: ["nemo", "wiyanna", "brynhild", "ling"] },
+			{ name: "boy", heroes: ["nicholas", "albert", "new1", "ethan", "qian sui"] },
+			{ name: "inspiration", heroes: ["hong kui"] },
+			{ name: "control", heroes: ["beatrice", "tricia"] },
+		],
+	},
+	{
 		name: "Aethyrine Mine",
 		options: [
 			{ name: "firearms", heroes: ["newton", "linsey", "lynn", "tricia", "ethan"] },
@@ -271,16 +281,6 @@ const mythic = [
 			{ name: "firearms", heroes: ["linsey", "newton", "ethan"] },
 			{ name: "control", heroes: ["newton"] },
 			{ name: "inspiration", heroes: ["hong kui"] },
-		],
-	},
-	{
-		name: "Glorious Battlefield",
-		options: [
-			{ name: "short hair", heroes: ["qian sui", "augus", "andre", "new1", "nicholas"] },
-			{ name: "protection", heroes: ["nemo", "wiyanna", "brynhild", "ling"] },
-			{ name: "boy", heroes: ["nicholas", "albert", "new1", "ethan", "qian sui"] },
-			{ name: "inspiration", heroes: ["hong kui"] },
-			{ name: "control", heroes: ["beatrice", "tricia"] },
 		],
 	},
 	{
