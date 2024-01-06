@@ -9,11 +9,10 @@ import Footer from "./components/Footer";
 import PageIndex from "./components/UI/PageIndex";
 import { searchModes } from "./constants";
 import SearchMode from "./components/SearchMode";
-import { IoClose } from "react-icons/io5";
+
+import SearchField from "./components/searchSection/SearchField";
 
 function App() {
-	const [searchValue, setSearchValue] = useState("");
-
 	const [currentMode, setCurrentMode] = useState({
 		value: searchModes[0],
 		label: searchModes[0].toUpperCase(),
@@ -126,28 +125,7 @@ function App() {
 						</div>
 					)}
 
-					{currentMode.value === searchModes[1] && (
-						<div className="search">
-							<div className="search__input">
-								<input
-									value={searchValue}
-									onChange={(e) => {
-										const value = e.target.value;
-										setSearchValue(value);
-									}}
-									type="text"
-									placeholder="Enter hero..."
-									maxLength={14}
-								/>
-								{!!searchValue.length && (
-									<span onClick={() => setSearchValue("")}>
-										<IoClose />
-									</span>
-								)}
-							</div>
-							<button disabled={!(searchValue.length > 2)}>Search</button>
-						</div>
-					)}
+					{currentMode.value === searchModes[1] && <SearchField data={data} />}
 
 					{!!heroesNames.length && <p className="chance">You have a chance to get:</p>}
 					<ul className="hero__list">
