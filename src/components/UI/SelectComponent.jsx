@@ -9,11 +9,11 @@ const SelectComponent = ({
 	name,
 	options,
 	isDisabled = false,
+	isClearable = true,
 }) => {
 	const stylesSelect = {
 		control: (baseStyles, state) => ({
 			...baseStyles,
-			borderColor: state.isFocused ? "grey" : "white",
 			background: "black",
 			cursor: "pointer",
 			color: state.isFocused ? "#bc03ff" : "white",
@@ -27,7 +27,7 @@ const SelectComponent = ({
 		dropdownIndicator: (baseStyles, state) => ({
 			...baseStyles,
 			color: state.isFocused ? "#bc03ff" : "white",
-			":hover": { color: state.isFocused ? "white" : "#bc03ff" },
+			":hover": { color: state.isFocused ? "#bc03ff" : "white" },
 		}),
 		indicatorSeparator: (baseStyles, state) => ({
 			...baseStyles,
@@ -61,7 +61,7 @@ const SelectComponent = ({
 			defaultValue={defaultValue}
 			isDisabled={isDisabled}
 			isLoading={false}
-			isClearable={true}
+			isClearable={isClearable}
 			isRtl={false}
 			isSearchable={false}
 			name={name}

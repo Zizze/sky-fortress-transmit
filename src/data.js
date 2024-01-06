@@ -63,7 +63,7 @@ const common = [
 			{ name: "fencing", heroes: ["nemo"] },
 			{ name: "elegant lady", heroes: ["beatrice"] },
 			{ name: "glasses", heroes: ["ethan", "tricia"] },
-			{ name: "firearms", heroes: ["ethan"] },
+
 			{ name: "inspiration", heroes: ["hong kui"] },
 		],
 	},
@@ -72,7 +72,6 @@ const common = [
 		options: [
 			{ name: "firearms", heroes: ["lynn", "ethan"] },
 			{ name: "glasses", heroes: ["ethan", "tricia"] },
-			{ name: "boy", heroes: ["ethan"] },
 		],
 	},
 	{
@@ -148,7 +147,7 @@ const rare = [
 		name: "Administrative office",
 		options: [
 			{ name: "firearms", heroes: ["newton", "linsey", "lynn", "tricia", "ethan"] },
-			{ name: "fencing", heroes: ["qian sui", "corvus", "new2", "ling"] },
+			{ name: "fencing", heroes: ["qian sui", "corvus", "tsukuyo", "ling"] },
 			{ name: "elderly", heroes: ["augus", "nemo"] },
 			{ name: "glasses", heroes: ["tricia", "ethan"] },
 			{ name: "short hair", heroes: ["qian sui", "albert", "nicholas", "ethan"] },
@@ -173,7 +172,7 @@ const rare = [
 			{ name: "glasses", heroes: ["ethan", "tricia"] },
 			{
 				name: "girl",
-				heroes: ["linsey", "freyja", "ling", "wiyanna", "sekhmet", "new2", "tricia"],
+				heroes: ["linsey", "freyja", "ling", "wiyanna", "sekhmet", "tsukuyo", "tricia"],
 			},
 			{ name: "short hair", heroes: ["albert"] },
 			{ name: "boy", heroes: ["albert", "new1"] },
@@ -183,7 +182,7 @@ const rare = [
 	{
 		name: "Chinese restaurant ",
 		options: [
-			{ name: "fencing", heroes: ["qian sui", "corvus", "nemo", "ling", "new2"] },
+			{ name: "fencing", heroes: ["qian sui", "corvus", "nemo", "ling", "tsukuyo"] },
 			{
 				name: "hat",
 				heroes: ["augus", "corvus", "margaret", "brynhild", "sekhmet", "tricia", "nemo"],
@@ -225,10 +224,23 @@ const mythic = [
 		options: [
 			{
 				name: "damage",
-				heroes: ["newton", "qian sui", "linsey", "corvus", "andre", "margaret", "freyja", "ethan"],
+				heroes: [
+					"newton",
+					"qian sui",
+					"linsey",
+					"corvus",
+					"andre",
+					"margaret",
+					"freyja",
+					"ethan",
+					"carna",
+				],
 			},
 			{ name: "elderly", heroes: ["andre", "nemo", "hong kui", "beatrice"] },
-			{ name: "elegant lady", heroes: ["margaret", "nemo", "brynhild", "hong kui", "beatrice"] },
+			{
+				name: "elegant lady",
+				heroes: ["margaret", "nemo", "brynhild", "hong kui", "beatrice", "carna"],
+			},
 			{ name: "protection", heroes: ["nemo", "ling", "nicholas", "brynhild"] },
 			{ name: "medical", heroes: ["sekhmet", "albert", "hong kui"] },
 		],
@@ -247,16 +259,16 @@ const mythic = [
 		name: "Aethyrine Mine",
 		options: [
 			{ name: "firearms", heroes: ["newton", "linsey", "lynn", "tricia", "ethan"] },
-			{ name: "fencing", heroes: ["qian sui", "corvus", "nemo", "new2", "ling"] },
+			{ name: "fencing", heroes: ["qian sui", "corvus", "nemo", "tsukuyo", "ling"] },
 			{ name: "short hair", heroes: ["qian sui", "albert"] },
 			{ name: "damage", heroes: ["linsey", "augus", "andre", "newton"] },
 			{ name: "hat", heroes: ["augus", "corvus", "andre", "sekhmet", "brynhild"] },
 		],
 	},
 	{
-		name: "Morning Gathering ",
+		name: "Morning Assembly",
 		options: [
-			{ name: "girl", heroes: ["newton", "linsey", "sekhmet", "lynn", "new2", "tricia"] },
+			{ name: "girl", heroes: ["newton", "linsey", "sekhmet", "lynn", "tsukuyo", "tricia"] },
 			{ name: "elegant lady", heroes: ["margaret", "carna", "hong kui", "beatrice"] },
 			{ name: "inspiration", heroes: ["hong kui", "lynn"] },
 			// { name: "control", heroes: [""] },
@@ -276,7 +288,7 @@ const mythic = [
 	{
 		name: "Path of Exploration",
 		options: [
-			{ name: "fencing", heroes: ["qian sui", "nemo", "new2", "corvus"] },
+			{ name: "fencing", heroes: ["qian sui", "nemo", "tsukuyo", "corvus"] },
 			{ name: "girl", heroes: ["linsey", "freyja", "tricia"] },
 			{ name: "firearms", heroes: ["linsey", "newton", "ethan"] },
 			{ name: "control", heroes: ["newton"] },

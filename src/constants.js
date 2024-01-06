@@ -1,2 +1,4 @@
 export const urlExelTable =
-	"https://docs.google.com/spreadsheets/d/11v_xegTvVhmbqJLOkJWj1Pr_pGWSjBqv0uoo-rwuZds/edit?usp=sharing";
+	"https://docs.google.com/spreadsheets/u/0/d/1LJvjpscen-1Tv3R63d6dYE4ClkobfCAy_LojrNwFTk4/htmlview";
+
+export const searchModes = ["select location", "find a hero"];
