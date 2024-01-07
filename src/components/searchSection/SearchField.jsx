@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoClose } from "react-icons/io5";
 import Table from "./tableResult/Table";
 import classes from "./SearchField.module.css";
@@ -6,6 +6,12 @@ import classes from "./SearchField.module.css";
 const SearchField = ({ data }) => {
 	const [searchValue, setSearchValue] = useState("");
 	const [searchResults, setSearchResults] = useState([]);
+	const [isEmpty, setIsEmpty] = useState(false);
+
+	useEffect(() => {
+		if (!!!searchValue) return;
+		setIsEmpty(!!!searchResults.length);
+	}, [searchResults]);
 
 	const handleInputChange = () => {
 		// Фильтруем данные на основе введенного значения
@@ -73,7 +79,8 @@ const SearchField = ({ data }) => {
 					Search
 				</button>
 			</div>
-			<Table searchResults={searchResults} />
+			{!!searchResults.length && <Table searchResults={searchResults} />}
+			{isEmpty && <div>Emty</div>}
 		</>
 	);
 };
