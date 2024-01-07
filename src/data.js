@@ -198,7 +198,10 @@ const mythic = [
 	{
 		name: "Gate of Truth",
 		options: [
-			{ name: "firearms", heroes: ["newton", "linsey", "freyja", "ethan", "tricia", "corvus"] },
+			{
+				name: "firearms",
+				heroes: ["newton", "linsey", "freyja", "ethan", "tricia", "corvus", "lynn"],
+			},
 			{
 				name: "long hair",
 				heroes: [

@@ -94,7 +94,8 @@
 	}
 }
 
-.search button:active {
+.search button:active,
+.search button:focus {
 	background-color: #bc03ff;
 	color: black;
 	border-color: black;
