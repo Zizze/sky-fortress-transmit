@@ -1,4 +1,5 @@
 .tablelink {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -51,4 +52,18 @@
 .tablelink a:active,
 .tablelink a:focus {
 	color: white;
+}
+
+.update {
+	margin: 0;
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: 1px;
+	font-size: 12px;
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	opacity: 0.5;
+	transform: translateX(50%);
+	min-width: 200px;
 }

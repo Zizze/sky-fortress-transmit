@@ -48,7 +48,7 @@ function App() {
 		} else {
 			setOptions(null);
 		}
-	}, [locationSelected]);
+	}, [locationSelected, currentMode]);
 
 	useEffect(() => {
 		if (optionSelected && options.length) {
@@ -79,6 +79,15 @@ function App() {
 		setOptionSelected(e);
 	};
 
+	useEffect(() => {
+		if (currentMode === searchModes[1]) return;
+		setRarity(null);
+		setLocationSelected(null);
+		setOptionSelected(null);
+		setOptions(null);
+		setHeroesNames([]);
+	}, [currentMode]);
+
 	return (
 		<PageIndex
 			title={"Transmits"}
@@ -95,45 +104,47 @@ function App() {
 					<SearchMode currentMode={currentMode} setCurrentMode={setCurrentMode} />
 
 					{currentMode.value === searchModes[0] && (
-						<div className="selects">
-							<SelectComponent
-								value={rarity}
-								onChange={onChangeRarity}
-								placeholder="Select rarity.."
-								defaultValue={rarityList[0]}
-								name="location rarity"
-								options={rarityList}
-							/>
+						<>
+							<div className="selects">
+								<SelectComponent
+									value={rarity}
+									onChange={onChangeRarity}
+									placeholder="Select rarity.."
+									defaultValue={rarityList[0]}
+									name="location rarity"
+									options={rarityList}
+								/>
 
-							<SelectComponent
-								value={locationSelected}
-								onChange={onChangeLocation}
-								placeholder="Location name.."
-								name="location"
-								options={locations}
-								isDisabled={!!!rarity}
-							/>
+								<SelectComponent
+									value={locationSelected}
+									onChange={onChangeLocation}
+									placeholder="Location name.."
+									name="location"
+									options={locations}
+									isDisabled={!!!rarity}
+								/>
 
-							<SelectComponent
-								value={optionSelected}
-								onChange={onChangeOption}
-								placeholder="Select option.."
-								name="location options"
-								options={optionSelects}
-								isDisabled={!!rarity && !!locationSelected ? false : true}
-							/>
-						</div>
+								<SelectComponent
+									value={optionSelected}
+									onChange={onChangeOption}
+									placeholder="Select option.."
+									name="location options"
+									options={optionSelects}
+									isDisabled={!!rarity && !!locationSelected ? false : true}
+								/>
+							</div>
+
+							{!!heroesNames.length && <p className="chance">You have a chance to get:</p>}
+							<ul className="hero__list">
+								{heroesNames.map((name) => {
+									if (name === "new1" || name === "tsukuyo") return;
+									return <Hero name={name} key={name} />;
+								})}
+							</ul>
+						</>
 					)}
 
 					{currentMode.value === searchModes[1] && <SearchField data={data} />}
-
-					{!!heroesNames.length && <p className="chance">You have a chance to get:</p>}
-					<ul className="hero__list">
-						{heroesNames.map((name) => {
-							if (name === "new1" || name === "tsukuyo") return;
-							return <Hero name={name} key={name} />;
-						})}
-					</ul>
 				</main>
 				<Footer />
 			</div>

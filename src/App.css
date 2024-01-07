@@ -1,5 +1,9 @@
 main {
 	padding: 0 10px;
+
+	@media screen and (max-width: 500px) {
+		padding: 0 5px;
+	}
 }
 
 .select__title {
@@ -87,6 +91,7 @@ main {
 	padding: 0;
 	margin: 0;
 	flex-wrap: wrap;
+	min-height: 40vh;
 
 	@media (max-width: 750px) {
 		gap: 10px;

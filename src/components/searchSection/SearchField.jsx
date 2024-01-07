@@ -55,6 +55,8 @@ const SearchField = ({ data }) => {
 			<div className={classes.search}>
 				<div className={classes["search__input"]}>
 					<input
+						onKeyDown={(e) => e.key === "Enter" && handleInputChange()}
+						name="search hero"
 						value={searchValue}
 						onChange={(e) => {
 							const value = e.target.value;
@@ -80,7 +82,7 @@ const SearchField = ({ data }) => {
 				</button>
 			</div>
 			{!!searchResults.length && <Table searchResults={searchResults} />}
-			{isEmpty && <div>Emty</div>}
+			{isEmpty && <p className={classes.empty}>Nothing found.</p>}
 		</>
 	);
 };

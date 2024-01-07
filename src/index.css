@@ -59,3 +59,10 @@ footer {
 	flex-shrink: 0;
 	flex-grow: 0;
 }
+
+input,
+button {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
