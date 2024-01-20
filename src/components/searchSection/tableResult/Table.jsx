@@ -14,7 +14,7 @@ const Table = ({ searchResults }) => {
 			</thead>
 			<tbody>
 				{searchResults.map((heroData) => {
-					if (heroData.hero === "new1" || heroData.hero === "tsukuyo") return;
+					if (heroData.hero === "new1") return;
 					return (
 						<tr
 							key={`${heroData.location}${heroData.option}`}

@@ -10,7 +10,7 @@ const Footer = () => {
 				<span>The table can also be found at this link.</span>
 			</a>
 
-			<p className={classes.update}>Site updated 07.01.2024</p>
+			<p className={classes.update}>Site updated 20.01.2024</p>
 		</footer>
 	);
 };
